@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+</head>
+<body>
+    <!-- /* server ko request bhjne k liye URL toh chahiye hi    and hm URL action m hi URL  derhe  ,   URL is kisi chiz ka pata(ADDRESS)   . form ko submit krne pr ye jo req jaigi kis jgh pr jaygi uska URL humne action m likha hai */ -->
+
+
+    <!-- WAYS TO SEND REQUEST FROM CLIENT TO SERVER
+     1. type URL in browser URL bar
+     2. through hyperlink
+     3.through JS
+     4.submitting HTML form  -->
+    
+    <h1>FORM EXaMPLE</h1>
+    <form action="something.py"> 
+        <input type="text" name="username">
+        <!-- agr input element me "name" attribute ki value nhi likha toh koi fayda hi nahi kyuki url mai dekhna submit krne ke baad sb dikhega ex. username = saurabh  URL m dikhega  -->
+
+        <!-- yrr aise toh URL mei password bhi show hojarha so, we use method in form tag { method ="post"} -->
+        <input type="password" name ="password">  
+    </form>
+</body>
+</html>

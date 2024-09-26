@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form action="something.py" onsubmit="validate(event)" >
+        <label for="name">Name:</label>
+        <input type="text" id="username" name="name" ><br><br>
+
+        <label for="gender">Gender:</label>
+        <input type="radio" id="male" name="gender" value="male"> Male
+        <input type="radio" id="female" name="gender" value="female"> Female
+        <input type="radio" id="other" name="gender" value="other"> Other<br><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" ><br><br>
+
+        <label for="state">State:</label>
+        <select id="state" name="state">
+            <option value="state1">State 1</option>
+            <option value="state2">State 2</option>
+            <option value="state3">State 3</option>
+            </select><br><br>
+
+        <label for="file">Choose File:</label>
+        <input type="file" id="file" name="file"><br><br>
+
+        <label for="textarea">Textarea:</label>
+        <textarea id="textarea" name="textarea" rows="5" cols="30"></textarea><br><br>
+
+        <input type="submit" value="Register">
+    </form>
+
+    <script>
+        function validate(event){
+            event.preventDefault();
+            var flag=true;
+            var h=document.getElementsByTagName("h1")[0];
+            h.style.color="red";
+           var username= document.getElementById("username");
+            if(username.value.length==0)
+                flag=false;
+            if(flag==true)
+                 document.getElementsByTagName("form")[0].submit();
+        }
+
+    </script>
+</body>
+</html>
